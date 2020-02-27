@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sparky Server Run
+Exec=/usr/bin/sparky-server-run
+Terminal=false
+Type=Application
+

@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# It checks services running on Sparky server edition
+
+# check 1: bonding
+CHECKBONDING="`lsmod | grep bonding`"
+if [ "$CHECKBONDING" = "" ]; then
+	modprobe bonding
+fi
+
+# check 2: samba-ad-dc
+CHECKSAMBAADDC="`systemctl status samba-ad-dc | grep inacitve`"
+if [ "$CHECKSAMBAADDC" != "" ]; then
+	systemctl unmask samba-ad-dc
+	systemctl start samba-ad-dc
+	systemctl enable samba-ad-dc
+fi
+
+exit 0
