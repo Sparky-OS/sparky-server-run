@@ -1,4 +1,7 @@
 Sparky Server Run
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23309056.svg)](https://doi.org/10.5281/zenodo.23309056)
+
 This checks and runs missing services.
 
 Copyright (C) 2018 Paweł Pijanowski
